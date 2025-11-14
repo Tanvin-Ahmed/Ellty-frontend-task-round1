@@ -12,17 +12,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary:
-    "bg-yellow-400 hover:bg-yellow-300 text-gray-900 focus:ring-yellow-400",
+  primary: "bg-[#FFCE22] hover:bg-[#FFD84D] text-gray-900 focus:ring-[#FFCE22]",
   secondary: "bg-gray-200 hover:bg-gray-300 text-gray-900 focus:ring-gray-400",
   danger: "bg-red-500 hover:bg-red-600 text-white focus:ring-red-400",
   success: "bg-green-500 hover:bg-green-600 text-white focus:ring-green-400",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "py-2 px-4 text-sm",
-  md: "py-3 px-6 text-base",
-  lg: "py-4 px-8 text-lg",
+  sm: "h-[40px] py-[10px] px-[20px] text-[14px] leading-[130%]",
+  md: "h-[40px] py-[10px] px-[20px] text-[14px] leading-[130%]",
+  lg: "h-[40px] py-[10px] px-[20px] text-[14px] leading-[130%]",
 };
 
 export default function Button({
@@ -37,9 +36,9 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+    "font-normal rounded-[4px] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-[10px]";
 
-  const widthStyles = fullWidth ? "w-full" : "";
+  const widthStyles = fullWidth ? "w-full" : "w-[340px]";
 
   const buttonClasses = `
     ${baseStyles}
@@ -57,7 +56,7 @@ export default function Button({
       {...props}
     >
       {isLoading ? (
-        <span className="flex items-center justify-center gap-2">
+        <>
           <svg
             className="animate-spin h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +78,7 @@ export default function Button({
             ></path>
           </svg>
           Loading...
-        </span>
+        </>
       ) : (
         children
       )}

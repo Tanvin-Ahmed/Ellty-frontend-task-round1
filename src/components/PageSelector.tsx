@@ -42,12 +42,12 @@ export default function PageSelector() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
-      <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-6">
+      <div className="w-[370px] bg-white rounded-[6px] border border-gray-200 shadow-lg pt-[10px] pb-[10px] px-6">
         {/* All pages option */}
         <div className="flex items-center justify-between py-4">
           <label
             htmlFor="all-pages"
-            className="text-sm font-medium text-gray-900 cursor-pointer flex-1"
+            className="text-[14px] font-normal leading-[130%] text-gray-900 cursor-pointer flex-1"
           >
             All pages
           </label>
@@ -72,7 +72,7 @@ export default function PageSelector() {
             >
               <label
                 htmlFor={`page-${page.id}`}
-                className="text-sm font-medium text-gray-900 cursor-pointer flex-1"
+                className="text-[14px] font-normal leading-[130%] text-gray-900 cursor-pointer flex-1"
               >
                 {page.name}
               </label>
