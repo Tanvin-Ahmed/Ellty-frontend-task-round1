@@ -44,7 +44,7 @@ export default function PageSelector() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-6">
         {/* All pages option */}
-        <div className="flex items-center justify-between py-4 border-b border-gray-100">
+        <div className="flex items-center justify-between py-4">
           <label
             htmlFor="all-pages"
             className="text-sm font-medium text-gray-900 cursor-pointer flex-1"
@@ -56,16 +56,19 @@ export default function PageSelector() {
             id="all-pages"
             checked={allPagesChecked}
             onChange={handleAllPagesToggle}
-            className="w-5 h-5 rounded border-2 border-gray-300 text-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-0 cursor-pointer transition-colors"
+            className="w-5 h-5 rounded border-2 border-gray-300 text-blue-500 focus:ring-0 focus:outline-none cursor-pointer transition-colors accent-blue-500"
           />
         </div>
+
+        {/* Border after All pages */}
+        <div className="border-b border-[#CDCDCD]"></div>
 
         {/* Individual pages */}
         <div className="space-y-0">
           {pages.map((page) => (
             <div
               key={page.id}
-              className="flex items-center justify-between py-4 border-b border-gray-100"
+              className="flex items-center justify-between py-4"
             >
               <label
                 htmlFor={`page-${page.id}`}
@@ -78,18 +81,19 @@ export default function PageSelector() {
                 id={`page-${page.id}`}
                 checked={page.checked}
                 onChange={() => handlePageToggle(page.id)}
-                className="w-5 h-5 rounded border-2 border-gray-300 text-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-0 cursor-pointer transition-colors"
+                className="w-5 h-5 rounded border-2 border-gray-300 text-blue-500 focus:ring-0 focus:outline-none cursor-pointer transition-colors accent-blue-500"
               />
             </div>
           ))}
         </div>
 
+        {/* Border before button */}
+        <div className="border-b border-[#CDCDCD] mb-6"></div>
+
         {/* Done button */}
-        <div className="mt-6">
-          <Button onClick={handleDone} fullWidth>
-            Done
-          </Button>
-        </div>
+        <Button onClick={handleDone} fullWidth>
+          Done
+        </Button>
       </div>
     </div>
   );
