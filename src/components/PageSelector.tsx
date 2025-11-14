@@ -44,7 +44,7 @@ export default function PageSelector() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="w-[370px] bg-white rounded-[6px] border border-gray-200 shadow-lg pt-[10px] pb-[10px] px-6">
         {/* All pages option */}
-        <div className="flex items-center justify-between py-4">
+        <div className="checkbox-row flex items-center justify-between py-4 px-2 -mx-2 rounded-md">
           <label
             htmlFor="all-pages"
             className="text-[14px] font-normal leading-[130%] text-gray-900 cursor-pointer flex-1"
@@ -56,7 +56,7 @@ export default function PageSelector() {
             id="all-pages"
             checked={allPagesChecked}
             onChange={handleAllPagesToggle}
-            className="w-5 h-5 rounded border-2 border-gray-300 text-blue-500 focus:ring-0 focus:outline-none cursor-pointer transition-colors accent-blue-500"
+            className="w-5 h-5 rounded border-2 border-gray-300 text-blue-500 focus:ring-0 focus:outline-none cursor-pointer transition-all duration-300 ease-in-out accent-blue-500 hover:scale-110"
           />
         </div>
 
@@ -68,7 +68,7 @@ export default function PageSelector() {
           {pages.map((page) => (
             <div
               key={page.id}
-              className="flex items-center justify-between py-4"
+              className="checkbox-row flex items-center justify-between py-4 px-2 -mx-2 rounded-md"
             >
               <label
                 htmlFor={`page-${page.id}`}
@@ -81,7 +81,7 @@ export default function PageSelector() {
                 id={`page-${page.id}`}
                 checked={page.checked}
                 onChange={() => handlePageToggle(page.id)}
-                className="w-5 h-5 rounded border-2 border-gray-300 text-blue-500 focus:ring-0 focus:outline-none cursor-pointer transition-colors accent-blue-500"
+                className="w-5 h-5 rounded border-2 border-gray-300 text-blue-500 focus:ring-0 focus:outline-none cursor-pointer transition-all duration-300 ease-in-out accent-blue-500 hover:scale-110"
               />
             </div>
           ))}
