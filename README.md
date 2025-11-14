@@ -1,74 +1,118 @@
-# React + TypeScript + Vite
+# Ellty Frontend Task - Page Selector Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A pixel-perfect implementation of a page selector component built with React, TypeScript, and Tailwind CSS. This project demonstrates clean code practices, responsive design, and smooth UI interactions.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**[View Live Application](https://lucent-faun-ace74c.netlify.app/)**
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Pixel-Perfect Design** - Accurately replicated from Figma specifications
+- **Interactive Checkboxes** - Select/deselect individual pages or all pages at once
+- **Smooth Animations** - Elegant transitions and hover effects for enhanced UX
+- **Smart Selection Logic** - "All pages" checkbox automatically syncs with individual selections
+- **Responsive Design** - Works seamlessly across different screen sizes
+- **TypeScript** - Full type safety and better developer experience
+- **Reusable Components** - Modular Button component with multiple variants
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - Modern React with hooks
+- **TypeScript** - Type-safe development
+- **Tailwind CSS 4** - Utility-first styling
+- **Vite** - Fast build tool and dev server
+- **Montserrat Font** - Clean, professional typography
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd front-end
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
-# Ellty-frontend-task-round1
+
+3. Run the development server
+
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🎨 Design Specifications
+
+- **Typography**: Montserrat (400 weight, 14px, 130% line height)
+- **Primary Color**: #FFCE22 (hover: #FFD84D)
+- **Border Color**: #CDCDCD
+- **Card Width**: 370px with 6px border radius
+- **Button**: 340px × 40px with 4px border radius
+
+## 🔧 Key Components
+
+### PageSelector
+
+The main component featuring:
+
+- Master "All pages" checkbox
+- Individual page selection options (Page 1-4)
+- Synchronized checkbox state management
+- Done button for confirmation
+
+### Button Component
+
+A versatile, customizable button with:
+
+- Multiple variants (primary, secondary, danger, success)
+- Three size options (sm, md, lg)
+- Loading state with spinner
+- Full TypeScript support
+- Hover and focus states
+
+## 📝 Code Quality
+
+- ✅ Clean, well-organized code
+- ✅ TypeScript for type safety
+- ✅ ESLint configuration included
+- ✅ Modular component architecture
+- ✅ No console errors or warnings
+- ✅ Optimized for performance
+
+## 🎯 Assignment Requirements
+
+This project fulfills all requirements:
+
+- ✅ Pixel-perfect replication of Figma design
+- ✅ React & Tailwind CSS implementation
+- ✅ Functional interactive elements
+- ✅ Clean, readable, and well-organized code
+- ✅ Professional project structure
+
+**Deployed on**: [Netlify](https://netlify.com)  
+**Live URL**: [https://lucent-faun-ace74c.netlify.app/](https://lucent-faun-ace74c.netlify.app/)
